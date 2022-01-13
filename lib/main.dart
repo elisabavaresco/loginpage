@@ -8,8 +8,10 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        appBar: CupertinoNavigationBar(),
+        appBar: CupertinoNavigationBar(
+          middle: Text('Login page'),
         ),
-      );
+      ),
+    );
   }
 }
