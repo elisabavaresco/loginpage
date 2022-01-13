@@ -11,7 +11,30 @@ class LoginPage extends StatelessWidget {
         appBar: CupertinoNavigationBar(
           middle: Text('Login page'),
         ),
+        body: UsernameField(),
       ),
     );
+  }
+}
+
+class UsernameField extends StatefulWidget {
+  const UsernameField({Key? key}) : super(key: key);
+
+  @override
+  State<UsernameField> createState() => _UsernameField();
+}
+
+class _UsernameField extends State<UsernameField> {
+  late TextEditingController _usernameTextController;
+
+  @override
+  void initState() {
+    super.initState();
+    _usernameTextController = TextEditingController(text: 'username');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoTextField(controller: _usernameTextController);
   }
 }
