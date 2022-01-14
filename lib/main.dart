@@ -6,12 +6,12 @@ void main() => runApp(LoginPage());
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        appBar: CupertinoNavigationBar(
-          middle: Text('Login page'),
+    return const CupertinoApp(
+      home: CupertinoPageScaffold(
+        navigationBar: const CupertinoNavigationBar(
+          middle: Text('Login Page'),
         ),
-        body: UsernameField(),
+          child: UsernameField(),
       ),
     );
   }
